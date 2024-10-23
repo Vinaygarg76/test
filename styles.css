@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Responsive Navigation */
+header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1);
+}
+
+/* 3D Effect for Header */
+.header-content {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+h1 {
+    font-size: 2.5rem;
+    transform: rotateY(10deg);
+    transition: transform 0.5s;
+}
+
+h1:hover {
+    transform: rotateY(0deg) scale(1.05);
+}
+
+section {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+/* 3D Service Cards */
+.service-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    perspective: 1000px;
+}
+
+.service-card {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: rotateY(10deg);
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover {
+    transform: rotateY(0deg) scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .service-box {
+        flex-direction: column;
+    }
+
+    .service-card {
+        width: 90%;
+    }
+}
+
+/* Contact Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
